@@ -29,6 +29,8 @@ app.post('/api/greetings', async (req, res)=> {
         // greeting
     })
 })
+
+//
 // endpont for update
 app.post('/api/greetings/edt', async (req, res)=> {
     const language = req.body.language
