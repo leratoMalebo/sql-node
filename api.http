@@ -5,3 +5,6 @@ Content-Type: application/json
     "language" : "Sesotho",
     "greeting" : "Akge Dumelang!!" 
 }
+###
+
+GET http://localhost:4008/api/greetings

@@ -16,28 +16,28 @@ app.get('/api/greetings', async (req, res)=> {
     })
 })
 // riwu
-// add greetngs
+// add greetings
 app.post('/api/greetings', async (req, res)=> {
-    const langage = req.body.langage
+    const language = req.body.language
     const greeting = req.body.greeting
     // add langage
-    await addGreeting(langage, greeting);
+    await addGreeting(language, greeting);
     res.json({
         status: 'Success',
-        message: `greeting '${greeting}' added for ${langage}`
+        message: `greeting '${greeting}' added for ${language}`
         // langage, 
         // greeting
     })
 })
 // endpont for update
 app.post('/api/greetings/edt', async (req, res)=> {
-    const langage = req.body.langage
+    const language = req.body.language
     const greeting = req.body.greeting
     // add langage
-    await addGreeting(langage, greeting);
+    await addGreeting(language, greeting);
     res.json({
         status: 'Success',
-        message: `greeting '${greeting}' added for ${langage}`
+        message: `greeting '${greeting}' added for ${language}`
         // langage, 
         // greeting
     })  
