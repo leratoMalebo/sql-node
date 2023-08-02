@@ -1,0 +1,1 @@
+[{"stmt":"create table greeting(\nid Integer PRIMARY KEY AUTOINCREMENT,\nlanguage text,\ngreeting text\n);","header":[],"rows":[]}]
