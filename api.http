@@ -1,7 +1,7 @@
-POST http://localhost:4006/api/greetings
+POST http://localhost:4008/api/greetings
 Content-Type: application/json
 
 {
-    "language" : "Afrikaans",
-    "greeting" : "Goeie dag" 
+    "language" : "Sesotho",
+    "greeting" : "Akge Dumelang!!" 
 }
