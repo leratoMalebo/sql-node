@@ -33,15 +33,35 @@ app.post('/api/greetings', async (req, res)=> {
 //
 // endpont for update
 app.post('/api/greetings/edt', async (req, res)=> {
-    const language = req.body.language
-    const greeting = req.body.greeting
+    const language = req.body.language;
+    const greeting = req.body.greeting;
+    const id=req.body.id;
     // add langage
-    await addGreeting(language, greeting);
+    await updateLangage(language, greeting,id);
     res.json({
         status: 'Success',
-        message: `greeting '${greeting}' added for ${language}`
-        // langage, 
-        // greeting
+        message: `greeting '${greeting}' updated for ${language}`
+    })  
+})
+//delete Greeting by id
+app.post('/api/greetings/edt', async (req, res)=> {
+    const id=req.body.id;
+    // add langage
+    await deleteGreeting(id);
+    res.json({
+        status: 'Success',
+        message: `greeting with ${id} deleted`
+    })  
+})
+
+//delete Greeting By Langage
+app.post('/api/greetings/edt', async (req, res)=> {
+    const language=req.body.language;
+    // add langage
+    await deleteGreeting(language);
+    res.json({
+        status: 'Success',
+        message: `greeting with ${language} deleted`
     })  
 })
 // console.log('start')
